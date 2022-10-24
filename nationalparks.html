@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Parks</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
@@ -20,10 +23,29 @@
         <label for="state_option">Choose a State/Territory:</label>
 
         <select name="state_option" id="state_option">
-            <option value="select">Select...</option>
+            <option value="">Select...</option>
 
         </select>
     </form>
+    <div class="container">
+        <!-- <h3>Outstanding Winning Lottery Tickets</h3> -->
+        <table class="table table-bordered" id="parksTbl">
+            <thead>
+                <tr class="table-info">
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                </tr>
+            </thead>
+            <tbody id="winningTicketsTblBody">
+            </tbody>
+        </table>
+    </div>
+
 
     <script src="./scripts/locationData.js"></script>
     <script src="./scripts/mountainData.js"></script>
