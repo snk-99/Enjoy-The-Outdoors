@@ -9,17 +9,27 @@
 </head>
 
 <body>
+    <h1>National Parks Search</h1>
+    <form>
+        <input type="radio" name="" id="location" name="by_location" value="Location">
+        <label for="location">By Location</label><br>
 
- 
+        <input type="radio" name="" id="type" name="by_type" value="Type">
+        <label for="type">By Type</label><br>
 
+        <label for="state_option">Choose a State/Territory:</label>
 
+        <select name="state_option" id="state_option">
+            <option value="select">Select...</option>
 
+        </select>
+    </form>
 
     <script src="./scripts/locationData.js"></script>
     <script src="./scripts/mountainData.js"></script>
     <script src="./scripts/nationalParkData.js"></script>
     <script src="./scripts/parkTypeData.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/nationalParksSearch.js"></script>
 </body>
 
 </html>
