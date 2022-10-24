@@ -42,9 +42,10 @@ function buildParkRow(tableBody, nationalPark) {
     let cell6 = row.insertCell(5);
     cell6.innerText = nationalPark.Phone;
 
-    let cell7 = row.insertCell(6);
-    cell7.innerText = nationalPark.Visit;
-
+    if (nationalPark.Visit !== undefined) {
+        let cell7 = row.insertCell(6);
+        cell7.innerText = nationalPark.Visit;
+    }
 
 }
 
