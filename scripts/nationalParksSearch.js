@@ -2,6 +2,7 @@
 
 const stateOption = document.getElementById("state_option");
 const nationalParksTbl = document.getElementById("parksTbl");
+const tblBody = document.getElementById("tblBody");
 
 
 function loadLocationList() {
@@ -14,12 +15,14 @@ function loadLocationList() {
 
 function loadnationalParksTable() {
     let selectedValue = stateOption.value;
+    tblBody.innerText = "";
     nationalParksArray.forEach((nationalPark) => {
         if (selectedValue === nationalPark.State) {
-            buildParkRow(nationalParksTbl, nationalPark);
+            buildParkRow(tblBody, nationalPark);
         }
     })
 }
+
 
 function buildParkRow(tableBody, nationalPark) {
     let row = tableBody.insertRow(-1);
