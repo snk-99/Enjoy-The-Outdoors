@@ -14,17 +14,18 @@
 <body>
     <h1>National Parks Search</h1>
     <form>
-        <input type="radio" name="" id="location" name="by_location" value="Location">
+        <input type="radio" name="by-select" id="location" name="by_location" value="Location">
         <label for="location">By Location</label><br>
 
-        <input type="radio" name="" id="type" name="by_type" value="Type">
+        <input type="radio" name="by-select" id="type" name="by_type" value="Type">
         <label for="type">By Type</label><br>
 
-        <label for="state_option">Choose a State/Territory:</label>
+        <!-- <input type="button" name="by-select" id="selectAll" name="by_all" value="All"> -->
+        <!-- <label for="type">All</label><br> -->
+
+        <label for="state_option" id="lableChange"></label>
 
         <select name="state_option" id="state_option">
-            <option value="">Select...</option>
-
         </select>
     </form>
     <div class="container">
