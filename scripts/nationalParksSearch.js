@@ -5,7 +5,7 @@ const nationalParksTbl = document.getElementById("parksTbl");
 // const tblBody = document.getElementById("tblBody");
 const byLocationField = document.getElementById("location");
 const byType = document.getElementById("type");
-const selectAll = document.getElementById("selectAll")
+// const selectAll = document.getElementById("selectAll")
 
 const lableChange = document.getElementById("lableChange");
 lableChange.innerHTML = "";
