@@ -73,7 +73,15 @@ function buildParkRow(tableBody, nationalPark) {
     cell5.innerText = nationalPark.ZipCode;
 
     let cell6 = row.insertCell(5);
-    cell6.innerText = nationalPark.Phone;
+    if (nationalPark.Phone !== 0) {
+        cell6.innerText = nationalPark.Phone;
+    } else {
+        const p = document.createElement('p');
+        p.innerText = "Not Available";
+        cell6.appendChild(p);
+
+    }
+    // cell6.innerText = nationalPark.Phone;
 
     let cell7 = row.insertCell(6);
 

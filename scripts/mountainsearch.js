@@ -30,30 +30,47 @@ function loadMountainInfo() {
 function buildMountainCard(section, mountain) {
     //created the card
     const div = document.createElement("div");
-    div.className = "card";
+    div.className = "card mb-3";
+    div.style = "width: 20rem;"
     //put inside the document 
     section.appendChild(div);
     //create the title
     let cardTitle = document.createElement("h3");
-    cardTitle.className = "card-title";
+    cardTitle.className = "card-title text-center";
     cardTitle.innerText = mountain.name;
+
+    let cardImage = document.createElement("img");
+    cardImage.className = "card-img-top"
+    cardImage.src = "images/" + mountain.img;
+    cardImage.alt = mountain.name;
+    // cardImage.style = "width: fluid;"
+
     //add the description
     let description = document.createElement("p");
     description.innerText = mountain.desc;
     //add the elevation
-    let elevation = document.createElement("p");
-    elevation.innerText = mountain.elevation;
-    //add additional info
-    let addInfo = document.createElement("p");
-    addInfo.innerText = `effort: ${mountain.effort}`
+    let elevation = document.createElement("h6");
+    elevation.innerText = `Mountain Elevation: ${mountain.elevation}`;
 
-    const divBody = document.createElement("div")
-    divBody.className = "card-body"
-    div.appendChild(divBody)
-    divBody.appendChild(cardTitle)
-    divBody.appendChild(description)
-    divBody.appendChild(elevation)
-    divBody.appendChild(addInfo)
+    let effort = document.createElement("h6");
+    effort.innerText = `Hiking Difficulty: ${mountain.effort}`;
+
+    let clearCardButton = document.createElement("button");
+    clearCardButton.className = "btn-close";
+    // clearCardButton.style = "text-end;"
+
+    function clearCard() {
+        section.removeChild(div)
+    }
+
+    clearCardButton.onclick = clearCard;
+
+    const divBody = document.createElement("div");
+    // divBody.className = "text-center";
+    // divBody.style = "row row-col-4 ";
+    div.appendChild(cardImage);
+    div.appendChild(divBody);
+    divBody.append(cardTitle, description, elevation, effort, clearCardButton);
 
 }
 

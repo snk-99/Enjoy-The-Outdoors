@@ -12,22 +12,37 @@
 </head>
 
 <body>
-    <h1>National Parks Search</h1>
-    <form>
-        <input type="radio" name="by-select" id="location" name="by_location" value="Location">
-        <label for="location">By Location</label><br>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Find A National Parks</h1>
+                <p class="lead text-muted">Explore America’s national parks. Discover our most treasured places,
+                    supported by people like you, and start your travel planning here by finding your park</p>
 
-        <input type="radio" name="by-select" id="type" name="by_type" value="Type">
-        <label for="type">By Type</label><br>
+                <form>
+                    <div>
+                        <label for="location">Search By Location</label>
+                        <input type="radio" name="by-select" class="form-check-input" id="location" name="by_location"
+                            value="Location">
 
-        <!-- <input type="button" name="by-select" id="selectAll" name="by_all" value="All"> -->
-        <!-- <label for="type">All</label><br> -->
+                        <label for="type">Search By Park Type</label>
+                        <input type="radio" name="by-select" class="form-check-input" id="type" name="by_type"
+                            value="Type">
 
-        <label for="state_option" id="lableChange"></label>
+                    </div>
 
-        <select name="state_option" id="state_option">
-        </select>
-    </form>
+
+                    <!-- <input type="button" name="by-select" id="selectAll" name="by_all" value="All"> -->
+                    <!-- <label for="type">All</label><br> -->
+
+                    <label for="state_option" id="lableChange"></label>
+
+                    <select name="state_option" id="state_option" class="form-select">
+                    </select>
+                </form>
+            </div>
+        </div>
+    </section>
     <div class="container">
         <!-- <h3>Outstanding Winning Lottery Tickets</h3> -->
         <table class="table table-bordered" id="parksTbl">
