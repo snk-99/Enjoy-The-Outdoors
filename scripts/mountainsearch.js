@@ -13,7 +13,7 @@ function loadAllMountains() {
 
 function loadMountains() {
     mountainsField.innerHTML = "";
-    let option = new Option("Select...", "");
+    let option = new Option("Search For A Mountain", "");
     mountainsField.appendChild(option);
 
     mountainsArray.forEach((mountain) => {
@@ -98,7 +98,7 @@ function clearCards() {
 
 window.onload = () => {
     allMountains.onclick = loadAllMountains;
-    
+
     loadMountains();
     mountainsField.onchange = loadMountainInfo;
 
