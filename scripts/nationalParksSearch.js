@@ -28,7 +28,7 @@ function loadLocationList() {
             stateOption.appendChild(option)
         })
     } else if (byType.checked) {
-        lableChange.innerHTML = "Park Type";
+        lableChange.innerHTML = "Type";
         parkTypesArray.forEach((park) => {
             let newOption = new Option(park, park);
             stateOption.appendChild(newOption);
