@@ -2,13 +2,19 @@
 
 const stateOption = document.getElementById("state_option");
 const nationalParksTbl = document.getElementById("parksTbl");
-// const tblBody = document.getElementById("tblBody");
 const byLocationField = document.getElementById("location");
 const byType = document.getElementById("type");
-// const selectAll = document.getElementById("selectAll")
+const selectAll = document.getElementById("selectAll");
+const clearTable = document.getElementById("clear-table");
 
 const lableChange = document.getElementById("lableChange");
 lableChange.innerHTML = "";
+
+function loadAllParks() {
+    nationalParksArray.forEach((nationalPark) => {
+        buildParkRow(tblBody, nationalPark);
+    });
+}
 
 function loadLocationList() {
     stateOption.innerHTML = "";
@@ -50,7 +56,12 @@ function loadnationalParksTable() {
     }
 }
 
+function clearTableData() {
+    let tableBody = document.querySelector("#tblBody");
 
+    let rows = document.querySelectorAll("#tblBody");
+    rows.forEach((table) => tableBody.removeChild(table));
+}
 
 
 
@@ -81,7 +92,6 @@ function buildParkRow(tableBody, nationalPark) {
         cell6.appendChild(p);
 
     }
-    // cell6.innerText = nationalPark.Phone;
 
     let cell7 = row.insertCell(6);
 
@@ -100,5 +110,6 @@ function buildParkRow(tableBody, nationalPark) {
 window.onload = () => {
     onclick = loadLocationList;
     stateOption.onchange = loadnationalParksTable;
-    // onclick = loadAdd;
+    selectAll.onclick = loadAllParks;
+    clearTable.onclick = clearTableData;
 }

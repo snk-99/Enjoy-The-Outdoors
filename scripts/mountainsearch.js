@@ -2,6 +2,14 @@
 
 const mountainsField = document.getElementById("mountainsField");
 const cardSection = document.getElementById("card-section");
+const allMountains = document.getElementById("allMountains");
+
+function loadAllMountains() {
+    mountainsArray.forEach((mountain) => {
+        buildMountainCard(cardSection, mountain)
+
+    })
+}
 
 function loadMountains() {
     mountainsField.innerHTML = "";
@@ -24,7 +32,6 @@ function loadMountainInfo() {
     })
 
 }
-
 
 
 function buildMountainCard(section, mountain) {
@@ -55,6 +62,12 @@ function buildMountainCard(section, mountain) {
     let effort = document.createElement("h6");
     effort.innerText = `Hiking Difficulty: ${mountain.effort}`;
 
+    // let sunRise = document.createElement("h6");
+    // effort.innerText = `Sunrise: ${lat.find(sunrise)}`;
+
+    // let sunSet = document.createElement("h6");
+    // effort.innerText = `Hiking Difficulty: ${mountain.effort}`;
+
     let clearCardButton = document.createElement("button");
     clearCardButton.className = "btn-close";
     // clearCardButton.style = "text-end;"
@@ -82,12 +95,17 @@ function clearCards() {
 }
 
 
+
 window.onload = () => {
-    // onclick = loadLocationList;
+    allMountains.onclick = loadAllMountains;
+    
     loadMountains();
     mountainsField.onchange = loadMountainInfo;
 
     const clearCardsButton = document.getElementById("clearCardsButton");
     clearCardsButton.onclick = clearCards;
 
+
 }
+
+
