@@ -28,12 +28,11 @@ function loadLocationList() {
             stateOption.appendChild(option)
         })
     } else if (byType.checked) {
-        lableChange.innerHTML = "Type";
+        lableChange.innerHTML = "Type of Park";
         parkTypesArray.forEach((park) => {
             let newOption = new Option(park, park);
             stateOption.appendChild(newOption);
         });
-
     }
 }
 
@@ -58,7 +57,6 @@ function loadnationalParksTable() {
 
 function clearTableData() {
     let tableBody = document.querySelector("#tblBody");
-
     let rows = document.querySelectorAll("#tblBody");
     rows.forEach((table) => tableBody.removeChild(table));
 }
